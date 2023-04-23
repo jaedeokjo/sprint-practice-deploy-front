@@ -3,8 +3,12 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 14
+      nodejs: 16
   build:
     commands:
       - npm install
       - npm run build
+artifacts:
+  files:
+    - '/build'
+  base-directory: '/front'
