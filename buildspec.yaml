@@ -4,13 +4,15 @@ phases:
   install:
     runtime-versions:
       nodejs: 14
+    commands:
+      - npm --version
+      - npm install
+      - ls -lah
   build:
     commands:
-      - ls -lah
-      - npm install
       - npm run build
       - ls -lah
-artifacts:
-  files:
-    - '/build'
-  base-directory: '/'
+  post-build:
+    commands:
+      - aws s3 sync /dist s3://practive-bucket-deploy-jaedeokdev
+      - ls -lah
