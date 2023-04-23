@@ -12,7 +12,7 @@ phases:
     commands:
       - npm run build
       - ls -lah
-  post-build:
+  post_build:
     commands:
       - aws s3 sync /dist s3://practive-bucket-deploy-jaedeokdev
       - ls -lah
