@@ -21,4 +21,4 @@ phases:
     commands:
       - aws s3 sync ./build s3://practive-bucket-deploy-jaedeokdev
       - ls -lah
-      - printenv |grep -i "react|s3"
+      - printenv
