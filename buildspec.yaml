@@ -20,7 +20,5 @@ phases:
   post_build:
     commands:
       - aws s3 sync ./build s3://practive-bucket-deploy-jaedeokdev
-      - which aws
-      - where aws
       - ls -lah
       - printenv |grep -i "react|s3"
