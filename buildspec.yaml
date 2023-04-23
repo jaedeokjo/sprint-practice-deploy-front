@@ -10,6 +10,7 @@ phases:
       - npm install
       - ls -lah
   pre_build:
+    commands:
       - npm run test1
   build:
     commands:
