@@ -9,6 +9,8 @@ phases:
       - npm --version
       - npm install
       - ls -lah
+  pre_build:
+      - npm run test1
   build:
     commands:
       - npm run build
@@ -18,3 +20,4 @@ phases:
     commands:
       - aws s3 sync ./build s3://practive-bucket-deploy-jaedeokdev
       - ls -lah
+      - printenv
