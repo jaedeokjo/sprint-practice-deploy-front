@@ -37,7 +37,7 @@ class Login extends Component {
           password: ''
         });
         if (err.response.status === 401) {
-          alert('이름과 비밀번호를 정확히 입력해주세요!');
+          alert('오늘 일이 제대로 안되네요...');
         }
       });
   }
