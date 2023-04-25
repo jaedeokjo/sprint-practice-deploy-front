@@ -17,6 +17,7 @@ class Login extends Component {
 
   handleSubmit() {
     const { username, password } = this.state;
+    console.log(`REACT_APP_API_URL: ${process.env.REACT_APP_API_URL}`)
 
     axios
       .post(
